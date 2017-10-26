@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="questionaire.QuestionWindowController">
+   <children>
+      <GridPane layoutX="10.0" layoutY="67.0" prefHeight="433.0" prefWidth="600.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="94.0" GridPane.columnSpan="3">
+               <children>
+                  <Label text="I like to program in Greenfoot">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="94.0" GridPane.columnSpan="3" GridPane.rowIndex="1">
+               <children>
+                  <Label text="I think Java is fun">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="94.0" GridPane.columnSpan="3" GridPane.rowIndex="2">
+               <children>
+                  <Label text="Java is my preferred language">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="3">
+               <children>
+                  <Label text="My assignments are fun">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="4">
+               <children>
+                  <Label text="My assignments are too easy">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="5">
+               <children>
+                  <Label text="I always do my assignments">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="6">
+               <children>
+                  <Label text="I always attend class">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="7">
+               <children>
+                  <Label text="I understand what is going on in class">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="8">
+               <children>
+                  <Label text="I think programming is fun">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <RadioButton fx:id="rbDisagree" mnemonicParsing="false" onMouseClicked="#calcScore" text="Disagree" GridPane.columnIndex="3">
+               <toggleGroup>
+                  <ToggleGroup fx:id="greenAns" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbNeutral" mnemonicParsing="false" onMouseClicked="#calcScore" text="Neutral" toggleGroup="$greenAns" GridPane.columnIndex="4" />
+            <RadioButton fx:id="rbAgree" mnemonicParsing="false" onMouseClicked="#calcScore" text="Agree" toggleGroup="$greenAns" GridPane.columnIndex="5" />
+            <RadioButton fx:id="rbDisagree1" mnemonicParsing="false" onMouseClicked="#calcScore" text="Disagree" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <toggleGroup>
+                  <ToggleGroup fx:id="javaFun" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbDisagree2" mnemonicParsing="false" onMouseClicked="#calcScore" text="Disagree" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <toggleGroup>
+                  <ToggleGroup fx:id="javaPrefer" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbDisagree3" mnemonicParsing="false" onMouseClicked="#calcScore" text="Disagree" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <toggleGroup>
+                  <ToggleGroup fx:id="assFun" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbDisagree4" mnemonicParsing="false" onMouseClicked="#calcScore" text="Disagree" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <toggleGroup>
+                  <ToggleGroup fx:id="assEasy" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbDisagree5" mnemonicParsing="false" onMouseClicked="#calcScore" text="Disagree" GridPane.columnIndex="3" GridPane.rowIndex="5">
+               <toggleGroup>
+                  <ToggleGroup fx:id="alwaysDo" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbDisagree6" mnemonicParsing="false" onMouseClicked="#calcScore" text="Disagree" GridPane.columnIndex="3" GridPane.rowIndex="6">
+               <toggleGroup>
+                  <ToggleGroup fx:id="alwaysAttend" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbDisagree7" mnemonicParsing="false" onMouseClicked="#calcScore" text="Disagree" GridPane.columnIndex="3" GridPane.rowIndex="7">
+               <toggleGroup>
+                  <ToggleGroup fx:id="iUnderstand" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbDisagree8" mnemonicParsing="false" onMouseClicked="#calcScore" text="Disagree" GridPane.columnIndex="3" GridPane.rowIndex="8">
+               <toggleGroup>
+                  <ToggleGroup fx:id="programFun" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbNeutral1" mnemonicParsing="false" onMouseClicked="#calcScore" text="Neutral" toggleGroup="$javaFun" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <RadioButton fx:id="rbNeutral2" mnemonicParsing="false" onMouseClicked="#calcScore" text="Neutral" toggleGroup="$javaPrefer" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <RadioButton fx:id="rbNeutral3" mnemonicParsing="false" onMouseClicked="#calcScore" text="Neutral" toggleGroup="$assFun" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <RadioButton fx:id="rbNeutral4" mnemonicParsing="false" onMouseClicked="#calcScore" text="Neutral" toggleGroup="$assEasy" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <RadioButton fx:id="rbNeutral5" mnemonicParsing="false" onMouseClicked="#calcScore" text="Neutral" toggleGroup="$alwaysDo" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <RadioButton fx:id="rbNeutral6" mnemonicParsing="false" onMouseClicked="#calcScore" text="Neutral" toggleGroup="$alwaysAttend" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+            <RadioButton fx:id="rbNeutral7" mnemonicParsing="false" onMouseClicked="#calcScore" text="Neutral" toggleGroup="$iUnderstand" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+            <RadioButton fx:id="rbNeutral8" mnemonicParsing="false" onMouseClicked="#calcScore" text="Neutral" toggleGroup="$programFun" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+            <RadioButton fx:id="rbAgree1" mnemonicParsing="false" onMouseClicked="#calcScore" text="Agree" toggleGroup="$javaFun" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <RadioButton fx:id="rbAgree2" mnemonicParsing="false" onMouseClicked="#calcScore" text="Agree" toggleGroup="$javaPrefer" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <RadioButton fx:id="rbAgree3" mnemonicParsing="false" onMouseClicked="#calcScore" text="Agree" toggleGroup="$assFun" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <RadioButton fx:id="rbAgree4" mnemonicParsing="false" onMouseClicked="#calcScore" text="Agree" toggleGroup="$assEasy" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <RadioButton fx:id="rbAgree5" mnemonicParsing="false" onMouseClicked="#calcScore" text="Agree" toggleGroup="$alwaysDo" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+            <RadioButton fx:id="rbAgree6" mnemonicParsing="false" onMouseClicked="#calcScore" text="Agree" toggleGroup="$alwaysAttend" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+            <RadioButton fx:id="rbAgree7" mnemonicParsing="false" onMouseClicked="#calcScore" text="Agree" toggleGroup="$iUnderstand" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+            <RadioButton fx:id="rbAgree8" mnemonicParsing="false" onMouseClicked="#calcScore" text="Agree" toggleGroup="$programFun" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+         </children>
+      </GridPane>
+      <Label layoutX="10.0" layoutY="6.0" text="Name of the participant: ">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblName" layoutX="407.0" layoutY="6.0" text="Name">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnCalc" layoutX="10.0" layoutY="500.0" mnemonicParsing="false" onAction="#btnCalc" text="Calculate Score" />
+      <Label layoutX="310.0" layoutY="495.0" text="Score: ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblScore" layoutX="407.0" layoutY="495.0" text="0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
