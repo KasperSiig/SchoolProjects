@@ -15,7 +15,11 @@ public class App {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        PersonManager pm = new PersonManager();
+        System.out.println("Teachers:");
+        pm.printTeachers();
+        System.out.println("\nStudents:");
+        pm.printStudents();
     }
     
 }
