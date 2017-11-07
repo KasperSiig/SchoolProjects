@@ -25,9 +25,6 @@ public class PersonManager {
         addTeachers();
         
         addStudents();
-        for (Person person : persons) {
-            System.out.println(person.toString());
-        }
     }
 
     private void addStudents() {
@@ -77,6 +74,10 @@ public class PersonManager {
             if (person instanceof Student) {
                 System.out.println(person.toString());
             } 
+        }
+        
+        for (int i = 0; i < persons.size(); i++) {
+            Person person = persons.get(i);
         }
     }
     
